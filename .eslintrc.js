@@ -1,9 +1,10 @@
 module.exports = {
-  'env': {
-    'commonjs': true,
-    'es2021': true,
-    'node': true
-},
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
@@ -43,7 +44,7 @@ module.exports = {
     "arrow-spacing": [
       "error", { "before": true, "after": true }
     ],
-    "no-console": "off",
+    "no-console": "error",
     "react/prop-types": 0
   }
 }
