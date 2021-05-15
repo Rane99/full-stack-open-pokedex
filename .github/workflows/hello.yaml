@@ -11,6 +11,12 @@ jobs:
   hello_world_job:
     runs-on: ubuntu-18.04
     steps:
-      - name: say hello
+      - name: Say hello
         run: |
           echo "Hello World!"
+      - name: Now it is
+        run: |
+          date
+      - name: Directory content
+        run: |
+          ls -l
