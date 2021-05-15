@@ -1,4 +1,4 @@
-/* eslint-disable no-undef, ident */
+/* eslint-disable no-undef, indent */
 
 describe('Pokedex', function() {
     it('front page can be opened', function() {
