@@ -9,6 +9,6 @@ describe('Pokedex', function() {
     it('navigation from frontpage works', function() {
         cy.visit('http://localhost:8080')
         cy.contains('ivysaur').click()
-        cy.contains('chlorophyll ')
+        cy.contains('chlorophyll')
       })
   })
