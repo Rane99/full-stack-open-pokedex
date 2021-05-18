@@ -16,5 +16,5 @@ jobs:
         run: echo "$COMMIT_MESSAGES"
       - name: print
         if: ${{ contains(toJson(github.event.commits.*.message), '#skip') }}
-        run: echo "it does contains skip"
+        run: echo "it does contains word skip"
         
