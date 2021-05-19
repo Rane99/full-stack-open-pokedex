@@ -2,7 +2,7 @@ name: Testing stuff
 
 on:
   schedule:
-    -cron: '* * * * *'
+    - cron: '* * * * *'
     
 
 jobs:
