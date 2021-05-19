@@ -1,9 +1,9 @@
 name: Testing stuff
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    -cron: '* * * * *'
+    
 
 jobs:
   a_test_job:
