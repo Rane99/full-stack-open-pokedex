@@ -15,7 +15,7 @@ jobs:
         with:
           url: https://full-stack-pokedex-app.herokuapp.com
           follow-redirect: no 
-          max-attempts: 3 
+          max-attempts: 2 
           retry-delay: 5s 
           retry-all: no 
       
