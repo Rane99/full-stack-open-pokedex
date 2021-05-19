@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: commit messages
+      - name: Success action
+        uses: 8398a7/action-slack@v3
+        if: ${{ success() }}
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
         env:
-          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-        run: echo "$COMMIT_MESSAGES"
-      - name: print
-        if: ${{ contains(toJson(github.event.commits.*.message), '#skip') }}
-        run: echo "it does contains  skip"
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+        
         
